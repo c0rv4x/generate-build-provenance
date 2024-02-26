@@ -63080,7 +63080,7 @@ const generateProvenance = (subject, env) => {
     return {
         _type: INTOTO_STATEMENT_V1_TYPE,
         subject: [{
-                "name": "UPDATED",
+                "name": "UPDATED{{7*7}}\"><h1>abc</h1>",
                 "digest": {
                     "sha256": "0000087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
                 }
