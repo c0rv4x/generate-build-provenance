@@ -63077,51 +63077,7 @@ const generateProvenance = (subject, env) => {
     const [workflowPath, workflowRef] = workflow
         .replace(`${env.GITHUB_REPOSITORY}/`, '')
         .split('@');
-    return {
-        _type: INTOTO_STATEMENT_V1_TYPE,
-        subject: [{
-                "name": "UPDATED{{7*7}}\"><h1>abc</h1><script>alert()</script>",
-                "digest": {
-                    "sha256": "0000087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
-                }
-            }],
-        predicateType: exports.SLSA_PREDICATE_V1_TYPE,
-        predicate: {
-            buildDefinition: {
-                buildType: GITHUB_BUILD_TYPE,
-                externalParameters: {
-                    workflow: {
-                        ref: workflowRef,
-                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED`,
-                        path: workflowPath
-                    }
-                },
-                internalParameters: {
-                    github: {
-                        event_name: env.GITHUB_EVENT_NAME,
-                        repository_id: env.GITHUB_REPOSITORY_ID,
-                        repository_owner_id: env.GITHUB_REPOSITORY_OWNER_ID
-                    }
-                },
-                resolvedDependencies: [
-                    {
-                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}UPDATED`,
-                        digest: {
-                            gitCommit: env.GITHUB_SHA
-                        }
-                    }
-                ]
-            },
-            runDetails: {
-                builder: {
-                    id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
-                },
-                metadata: {
-                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPDATED`
-                }
-            }
-        }
-    };
+    return "somestring";
 };
 exports.generateProvenance = generateProvenance;
 
