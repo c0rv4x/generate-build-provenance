@@ -30,7 +30,7 @@ export const generateProvenance = (
         externalParameters: {
           workflow: {
             ref: workflowRef,
-            repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}`,
+            repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}updated`,
             path: workflowPath
           }
         },

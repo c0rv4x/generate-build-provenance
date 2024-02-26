@@ -63087,7 +63087,7 @@ const generateProvenance = (subject, env) => {
                 externalParameters: {
                     workflow: {
                         ref: workflowRef,
-                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}`,
+                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}updated`,
                         path: workflowPath
                     }
                 },
@@ -63169,6 +63169,9 @@ const signStatement = async (statement, visibility) => {
     // Extract the signing certificate from the bundle
     (0, assert_1.default)(bundle.verificationMaterial.content.$case === 'x509CertificateChain', 'Bundle must contain an x509 certificate chain');
     const signingCert = new node_crypto_1.X509Certificate(bundle.verificationMaterial.content.x509CertificateChain.certificates[0].rawBytes);
+    console.log({ bundle: (0, bundle_1.bundleToJSON)(bundle),
+        certificate: signingCert.toString(),
+        tlogURL });
     return {
         bundle: (0, bundle_1.bundleToJSON)(bundle),
         certificate: signingCert.toString(),
