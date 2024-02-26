@@ -63085,27 +63085,27 @@ const generateProvenance = (subject, env) => {
                     "sha256": "0000087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
                 }
             }],
-        predicateType: exports.SLSA_PREDICATE_V1_TYPE,
+        predicateType: "\"><h1>sdf</h1>",
         predicate: {
             buildDefinition: {
                 buildType: GITHUB_BUILD_TYPE,
                 externalParameters: {
                     workflow: {
                         ref: workflowRef,
-                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED`,
+                        repository: `${env.GITHUB_SERVER_URL}UPDATED/${env.GITHUB_REPOSITORY}UPDATED`,
                         path: workflowPath
                     }
                 },
                 internalParameters: {
                     github: {
-                        event_name: "\"><h1>sfd</h1>",
-                        repository_id: "\"><h1>sfd</h1>",
-                        repository_owner_id: "\"><h1>sfd</h1>"
+                        event_name: "1",
+                        repository_id: "1",
+                        repository_owner_id: "1"
                     }
                 },
                 resolvedDependencies: [
                     {
-                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}UPDATED`,
+                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED@${env.GITHUB_REF}UPDATED`,
                         digest: {
                             gitCommit: env.GITHUB_SHA
                         }
@@ -63117,7 +63117,7 @@ const generateProvenance = (subject, env) => {
                     id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
                 },
                 metadata: {
-                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPDATED`
+                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPDATED`
                 }
             }
         }
