@@ -35,7 +35,7 @@ export const generateProvenance = (
         externalParameters: {
           workflow: {
             ref: workflowRef,
-            repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}updated`,
+            repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED`,
             path: workflowPath
           }
         },
@@ -48,7 +48,7 @@ export const generateProvenance = (
         },
         resolvedDependencies: [
           {
-            uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}`,
+            uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}UPDATED`,
             digest: {
               gitCommit: env.GITHUB_SHA
             }
@@ -60,7 +60,7 @@ export const generateProvenance = (
           id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
         },
         metadata: {
-          invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}`
+          invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPDATED`
         }
       }
     }
