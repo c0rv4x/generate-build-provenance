@@ -63078,35 +63078,34 @@ const generateProvenance = (subject, env) => {
         .replace(`${env.GITHUB_REPOSITORY}/`, '')
         .split('@');
     return {
-        _type: 'https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/aa',
+        _type: INTOTO_STATEMENT_V1_TYPE,
         subject: [{
-                "name": "UPDATED{{7*7}}\"><h1>abc</h1>{{7*7}} ${7*7}<%= 7 * 7 %> ",
+                "name": "mybinaryk<h1>hey</h1>ek",
                 "digest": {
-                    "sha256": "{{7*7}} <%= 7 * 7 %>${7*7} "
+                    "sha256": "5d5b087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
                 }
             }],
-        predicateType: "https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/bbb",
-        "updated: abc": "123",
+        predicateType: exports.SLSA_PREDICATE_V1_TYPE,
         predicate: {
             buildDefinition: {
-                buildType: "https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/kfkfk",
+                buildType: GITHUB_BUILD_TYPE,
                 externalParameters: {
                     workflow: {
                         ref: workflowRef,
-                        repository: 'https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/cccjc',
-                        path: 'file:///etc/passwd'
+                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}`,
+                        path: workflowPath
                     }
                 },
                 internalParameters: {
                     github: {
-                        event_name: "1",
-                        repository_id: "1",
-                        repository_owner_id: "1"
+                        event_name: env.GITHUB_EVENT_NAME,
+                        repository_id: env.GITHUB_REPOSITORY_ID,
+                        repository_owner_id: env.GITHUB_REPOSITORY_OWNER_ID
                     }
                 },
                 resolvedDependencies: [
                     {
-                        uri: `https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/adsfwejrweorwoeworeoo`,
+                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}`,
                         digest: {
                             gitCommit: env.GITHUB_SHA
                         }
@@ -63115,10 +63114,10 @@ const generateProvenance = (subject, env) => {
             },
             runDetails: {
                 builder: {
-                    id: `https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/adsfwe312323jrweorwoeworeoo`
+                    id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
                 },
                 metadata: {
-                    invocationId: `https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/${env.GITHUB_REPOSITORY}UPDA{{7*7}} ${7 * 7}<%= 7 * 7 %> TED/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPD{{7*7}} ${7 * 7}<%= 7 * 7 %> ATED`
+                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}`
                 }
             }
         }
