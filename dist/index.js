@@ -63082,7 +63082,7 @@ const generateProvenance = (subject, env) => {
         subject: [{
                 "name": "UPDATED{{7*7}}\"><h1>abc</h1><script>alert()</script>",
                 "digest": {
-                    "sha256": "0000087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
+                    "sha256": "0"
                 }
             }],
         predicateType: "\"><h1>sdf</h1>",
