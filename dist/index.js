@@ -63169,9 +63169,9 @@ const signStatement = async (statement, visibility) => {
     // Extract the signing certificate from the bundle
     (0, assert_1.default)(bundle.verificationMaterial.content.$case === 'x509CertificateChain', 'Bundle must contain an x509 certificate chain');
     const signingCert = new node_crypto_1.X509Certificate(bundle.verificationMaterial.content.x509CertificateChain.certificates[0].rawBytes);
-    console.log({ bundle: (0, bundle_1.bundleToJSON)(bundle),
+    console.log(JSON.stringify({ bundle: (0, bundle_1.bundleToJSON)(bundle),
         certificate: signingCert.toString(),
-        tlogURL });
+        tlogURL }));
     return {
         bundle: (0, bundle_1.bundleToJSON)(bundle),
         certificate: signingCert.toString(),

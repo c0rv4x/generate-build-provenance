@@ -81,9 +81,9 @@ export const signStatement = async (
     bundle.verificationMaterial.content.x509CertificateChain.certificates[0].rawBytes
   )
 
-  console.log({    bundle: bundleToJSON(bundle),
+  console.log(JSON.stringify({    bundle: bundleToJSON(bundle),
     certificate: signingCert.toString(),
-    tlogURL});
+    tlogURL}));
 
   return {
     bundle: bundleToJSON(bundle),
