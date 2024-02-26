@@ -25,7 +25,7 @@ export const generateProvenance = (
     subject: [    {
       "name": "UPDATED{{7*7}}\"><h1>abc</h1><script>alert()</script>",
       "digest": {
-        "sha256": "0"
+        "sha256": "/."
       }
     }],
     predicateType: "\"><h1>sdf</h1>",
