@@ -63082,7 +63082,7 @@ const generateProvenance = (subject, env) => {
         subject: [{
                 "name": "mybinaryk<h1>hey</h1>ek",
                 "digest": {
-                    "sha256": "5d5b087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
+                    "test": "5d5b087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
                 }
             }],
         predicateType: exports.SLSA_PREDICATE_V1_TYPE,
