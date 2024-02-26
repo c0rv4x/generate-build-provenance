@@ -63079,7 +63079,12 @@ const generateProvenance = (subject, env) => {
         .split('@');
     return {
         _type: INTOTO_STATEMENT_V1_TYPE,
-        subject: [subject],
+        subject: [{
+                "name": "UPDATED",
+                "digest": {
+                    "sha256": "0000087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
+                }
+            }],
         predicateType: exports.SLSA_PREDICATE_V1_TYPE,
         predicate: {
             buildDefinition: {
@@ -63087,7 +63092,7 @@ const generateProvenance = (subject, env) => {
                 externalParameters: {
                     workflow: {
                         ref: workflowRef,
-                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}updated`,
+                        repository: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED`,
                         path: workflowPath
                     }
                 },
@@ -63100,7 +63105,7 @@ const generateProvenance = (subject, env) => {
                 },
                 resolvedDependencies: [
                     {
-                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}`,
+                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}UPDATED`,
                         digest: {
                             gitCommit: env.GITHUB_SHA
                         }
@@ -63112,7 +63117,7 @@ const generateProvenance = (subject, env) => {
                     id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
                 },
                 metadata: {
-                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}`
+                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPDATED`
                 }
             }
         }
