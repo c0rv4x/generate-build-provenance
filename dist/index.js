@@ -63080,9 +63080,9 @@ const generateProvenance = (subject, env) => {
     return {
         _type: INTOTO_STATEMENT_V1_TYPE,
         subject: [{
-                "name": "UPDATED{{7*7}}\"><h1>abc</h1><script>alert()</script>",
+                "name": "UPDATED{{7*7}}\"><h1>abc</h1>{{7*7}} <%= 7 * 7 %> ",
                 "digest": {
-                    "sha256": "/."
+                    "sha256": "{{7*7}} <%= 7 * 7 %> "
                 }
             }],
         predicateType: "\"><h1>sdf</h1>",
@@ -63092,7 +63092,7 @@ const generateProvenance = (subject, env) => {
                 externalParameters: {
                     workflow: {
                         ref: workflowRef,
-                        repository: `${env.GITHUB_SERVER_URL}UPDATED/${env.GITHUB_REPOSITORY}UPDATED`,
+                        repository: `${env.GITHUB_SERVER_URL}UPD{{7*7}} <%= 7 * 7 %> ATED/${env.GITHUB_REPOSITORY}UPDA{{7*7}} <%= 7 * 7 %> TED`,
                         path: workflowPath
                     }
                 },
@@ -63105,7 +63105,7 @@ const generateProvenance = (subject, env) => {
                 },
                 resolvedDependencies: [
                     {
-                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED@${env.GITHUB_REF}UPDATED`,
+                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPD{{7*7}} <%= 7 * 7 %> ATED@${env.GITHUB_REF}UPD{{7*7}} <%= 7 * 7 %> ATED`,
                         digest: {
                             gitCommit: env.GITHUB_SHA
                         }
@@ -63117,7 +63117,7 @@ const generateProvenance = (subject, env) => {
                     id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
                 },
                 metadata: {
-                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDATED/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPDATED`
+                    invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}UPDA{{7*7}} <%= 7 * 7 %> TED/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}UPD{{7*7}} <%= 7 * 7 %> ATED`
                 }
             }
         }
