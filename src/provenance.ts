@@ -29,7 +29,7 @@ export const generateProvenance = (
       }
     }],
     predicateType: "https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/bbb",
-    updated: "123",
+    "updated: abc": "123",
     predicate: {
       buildDefinition: {
         buildType: "https://p2shw1jrs1ps8k67mn8tyvq4hvnmbfz4.oastify.com/kfkfk",
