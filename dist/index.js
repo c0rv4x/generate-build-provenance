@@ -14387,6 +14387,8 @@ class FulcioSigner {
                 message: 'unexpected format for signing key',
             });
         }
+        console.log('identityToken');
+        console.log(identityToken);
         // Create signing certificate
         const certificates = await this.ca.createSigningCertificate(identityToken, challenge.key.publicKey, challenge.signature);
         // Generate artifact signature
