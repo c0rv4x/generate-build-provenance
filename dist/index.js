@@ -14306,6 +14306,18 @@ class EphemeralSigner {
     constructor() {
         this.keypair = crypto_1.default.generateKeyPairSync(EC_KEYPAIR_TYPE, {
             namedCurve: P256_CURVE,
+            modulusLength: 2048, // The length of your key in bits
+            publicKeyEncoding: {
+              type: 'spki', // Recommended to use 'spki' for public keys
+              format: 'pem' // Key is encoded in PEM format
+            },
+            privateKeyEncoding: {
+              type: 'pkcs8', // Recommended to use 'pkcs8' for private keys
+              format: 'pem', // Key is encoded in PEM format
+              // Optionally you can set a passphrase for your private key
+              // cipher: 'aes-256-cbc',
+              // passphrase: 'your passphrase here'
+            }
         });
     }
     async sign(data) {
