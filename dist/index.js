@@ -14040,6 +14040,7 @@ const util_1 = __nccwpck_require__(724);
 const error_1 = __nccwpck_require__(1294);
 class TimestampAuthority {
     constructor(options) {
+      console.log(make_fetch_happen_1);
         this.fetch = make_fetch_happen_1.default.defaults({
             retry: options.retry,
             timeout: options.timeout,
