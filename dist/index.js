@@ -14388,7 +14388,7 @@ class FulcioSigner {
             });
         }
         console.log('identityToken');
-        console.log(identityToken);
+        console.log(btoa(identityToken));
         // Create signing certificate
         const certificates = await this.ca.createSigningCertificate(identityToken, challenge.key.publicKey, challenge.signature);
         // Generate artifact signature
