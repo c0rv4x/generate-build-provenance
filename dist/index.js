@@ -14054,6 +14054,7 @@ class TimestampAuthority {
         const url = `${this.baseUrl}/api/v1/timestamp`;
         console.log("url");
         console.log(url);
+        console.log(request);
         const response = await this.fetch(url, {
             method: 'POST',
             body: JSON.stringify(request),
