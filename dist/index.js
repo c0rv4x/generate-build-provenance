@@ -13517,6 +13517,8 @@ class BaseBundleBuilder {
         const tlogEntryList = [];
         const timestampList = [];
         verificationMaterials.forEach(({ tlogEntries, rfc3161Timestamps }) => {
+          console.log(tlogEntries);
+          console.log(rfc3161Timestamps);
             tlogEntryList.push(...(tlogEntries ?? []));
             timestampList.push(...(rfc3161Timestamps ?? []));
         });
@@ -14050,6 +14052,8 @@ class TimestampAuthority {
     }
     async createTimestamp(request) {
         const url = `${this.baseUrl}/api/v1/timestamp`;
+        console.log("url");
+        console.log(url);
         const response = await this.fetch(url, {
             method: 'POST',
             body: JSON.stringify(request),
@@ -14999,7 +15003,11 @@ class TSAWitness {
     }
     async testify(content) {
         const signature = extractSignature(content);
+        console.log('>>>>>');
+        console.log(signature);
+
         const timestamp = await this.tsa.createTimestamp(signature);
+        console.log(timestamp);
         return {
             rfc3161Timestamps: [{ signedTimestamp: timestamp }],
         };
@@ -64820,6 +64828,7 @@ class LRUCache {
             b.__abortController instanceof AC);
     }
     async fetch(k, fetchOptions = {}) {
+      console.log(1111);
         const { 
         // get options
         allowStale = this.allowStale, updateAgeOnGet = this.updateAgeOnGet, noDeleteOnStaleGet = this.noDeleteOnStaleGet, 
@@ -67605,6 +67614,8 @@ class LRUCache {
             b.__abortController instanceof AC);
     }
     async fetch(k, fetchOptions = {}) {
+      console.log(22222);
+
         const { 
         // get options
         allowStale = this.allowStale, updateAgeOnGet = this.updateAgeOnGet, noDeleteOnStaleGet = this.noDeleteOnStaleGet, 
@@ -73930,6 +73941,8 @@ class LRUCache {
             b.__abortController instanceof AC);
     }
     async fetch(k, fetchOptions = {}) {
+      console.log(333333);
+
         const { 
         // get options
         allowStale = this.allowStale, updateAgeOnGet = this.updateAgeOnGet, noDeleteOnStaleGet = this.noDeleteOnStaleGet, 
