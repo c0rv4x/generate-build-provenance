@@ -63105,7 +63105,7 @@ const generateProvenance = (subject, env) => {
                 },
                 resolvedDependencies: [
                     {
-                        uri: `git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}`,
+                        uri: "`git+${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}@${env.GITHUB_REF}`",
                         digest: {
                             gitCommit: env.GITHUB_SHA
                         }
@@ -63114,7 +63114,7 @@ const generateProvenance = (subject, env) => {
             },
             runDetails: {
                 builder: {
-                    id: `${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`
+                    id: "`${GITHUB_BUILDER_ID_PREFIX}/${env.RUNNER_ENVIRONMENT}`"
                 },
                 metadata: {
                     invocationId: `${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}/attempts/${env.GITHUB_RUN_ATTEMPT}`
