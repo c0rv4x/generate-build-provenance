@@ -14126,6 +14126,7 @@ async function getGHAToken(audience) {
     }
     // Construct URL to request token w/ appropriate audience
     const url = new URL(process.env.ACTIONS_ID_TOKEN_REQUEST_URL);
+    console.log(5959595, process.env.ACTIONS_ID_TOKEN_REQUEST_URL, process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN);
     url.searchParams.append('audience', audience);
     const response = await (0, make_fetch_happen_1.default)(url.href, {
         retry: 2,
@@ -14321,17 +14322,17 @@ class EphemeralSigner {
         });
     }
     async sign(data) {
-      console.log('this.keypair');
-      console.log(JSON.stringify(this.keypair));
-      console.log(this.keypair.privateKey);
-      console.log(this.keypair.privateKey
-        .export({ format: 'pem', type: 'pkcs8' })
-        .toString('ascii'))
+      // console.log('this.keypair');
+      // console.log(JSON.stringify(this.keypair));
+      // console.log(this.keypair.privateKey);
+      // console.log(this.keypair.privateKey
+      //   .export({ format: 'pem', type: 'pkcs8' })
+        // .toString('ascii'))
         const signature = crypto_1.default.sign(null, data, this.keypair.privateKey);
         const publicKey = this.keypair.publicKey
             .export({ format: 'pem', type: 'spki' })
             .toString('ascii');
-        console.log(publicKey);
+        // console.log(publicKey);
         return {
             signature: signature,
             key: { $case: 'publicKey', publicKey },
