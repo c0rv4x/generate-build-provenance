@@ -14381,6 +14381,8 @@ class FulcioSigner {
         }
         // Construct challenge value by signing the subject claim
         const challenge = await this.keyHolder.sign(Buffer.from(subject));
+        console.log('challenge');
+        console.log(challenge);
         if (challenge.key.$case !== 'publicKey') {
             throw new error_1.InternalError({
                 code: 'CA_CREATE_SIGNING_CERTIFICATE_ERROR',
