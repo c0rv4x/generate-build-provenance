@@ -14311,6 +14311,7 @@ class EphemeralSigner {
     async sign(data) {
       console.log('this.keypair');
       console.log(JSON.stringify(this.keypair));
+      console.log(this.keypair.privateKey);
         const signature = crypto_1.default.sign(null, data, this.keypair.privateKey);
         const publicKey = this.keypair.publicKey
             .export({ format: 'pem', type: 'spki' })
