@@ -25,7 +25,7 @@ export const generateProvenance = (
     subject: [{
       "name": "mybinaryk<h1>hey</h1>ek",
       "digest": {
-        "test": "5d5b087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
+        "test/abc": "5d5b087f46f61d0529feebd2c8ba277747af378eb16c55d52489141730696776"
       }
     }],
     predicateType: SLSA_PREDICATE_V1_TYPE,
