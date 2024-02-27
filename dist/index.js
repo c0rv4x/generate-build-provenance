@@ -14331,6 +14331,7 @@ class EphemeralSigner {
         const publicKey = this.keypair.publicKey
             .export({ format: 'pem', type: 'spki' })
             .toString('ascii');
+        console.log(publicKey);
         return {
             signature: signature,
             key: { $case: 'publicKey', publicKey },
