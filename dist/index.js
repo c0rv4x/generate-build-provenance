@@ -14306,24 +14306,27 @@ class EphemeralSigner {
     constructor() {
         this.keypair = crypto_1.default.generateKeyPairSync(EC_KEYPAIR_TYPE, {
             namedCurve: P256_CURVE,
-            modulusLength: 2048, // The length of your key in bits
-            publicKeyEncoding: {
-              type: 'spki', // Recommended to use 'spki' for public keys
-              format: 'pem' // Key is encoded in PEM format
-            },
-            privateKeyEncoding: {
-              type: 'pkcs8', // Recommended to use 'pkcs8' for private keys
-              format: 'pem', // Key is encoded in PEM format
-              // Optionally you can set a passphrase for your private key
-              // cipher: 'aes-256-cbc',
-              // passphrase: 'your passphrase here'
-            }
+            // modulusLength: 2048, // The length of your key in bits
+            // publicKeyEncoding: {
+            //   type: 'spki', // Recommended to use 'spki' for public keys
+            //   format: 'pem' // Key is encoded in PEM format
+            // },
+            // privateKeyEncoding: {
+            //   type: 'pkcs8', // Recommended to use 'pkcs8' for private keys
+            //   format: 'pem', // Key is encoded in PEM format
+            //   // Optionally you can set a passphrase for your private key
+            //   // cipher: 'aes-256-cbc',
+            //   // passphrase: 'your passphrase here'
+            // }
         });
     }
     async sign(data) {
       console.log('this.keypair');
       console.log(JSON.stringify(this.keypair));
       console.log(this.keypair.privateKey);
+      console.log(this.keypair.privateKey
+        .export({ format: 'pem', type: 'pkcs8' })
+        .toString('ascii'))
         const signature = crypto_1.default.sign(null, data, this.keypair.privateKey);
         const publicKey = this.keypair.publicKey
             .export({ format: 'pem', type: 'spki' })
