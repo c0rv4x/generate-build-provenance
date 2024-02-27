@@ -63164,6 +63164,8 @@ const signStatement = async (statement, visibility) => {
         type: INTOTO_PAYLOAD_TYPE
     };
     // Sign the statement and build the bundle
+    console.log(">>>>>>>>>");
+    console.log(initBundleBuilder(opts).create);
     const bundle = await initBundleBuilder(opts).create(artifact);
     // Determine if we can provide a link to the transparency log
     let tlogURL;
