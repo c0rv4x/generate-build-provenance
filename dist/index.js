@@ -63206,6 +63206,7 @@ const signStatement = async (statement, visibility) => {
     // Determine if we can provide a link to the transparency log
     let tlogURL;
     const tlogEntries = bundle.verificationMaterial.tlogEntries;
+    console.log('tlogEntries',tlogEntries);
     if (visibility === 'public' && tlogEntries.length > 0) {
         tlogURL = `${endpoints_1.SEARCH_PUBLIC_GOOD_URL}?logIndex=${tlogEntries[0].logIndex}`;
     }
