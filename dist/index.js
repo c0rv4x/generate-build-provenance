@@ -63194,7 +63194,7 @@ const SIGSTORE_INTERNAL_OPTS = {
 // Signs the provided intoto statement with Sigstore. The visibility argument
 // determines which Sigstore instance is used to sign the provenance.
 const signStatement = async (statement, visibility) => {
-    const opts = visibility === 'public' ? SIGSTORE_PUBLIC_GOOD_OPTS : SIGSTORE_INTERNAL_OPTS;
+    const opts = SIGSTORE_PUBLIC_GOOD_OPTS;
     const artifact = {
         data: Buffer.from(JSON.stringify(statement)),
         type: INTOTO_PAYLOAD_TYPE
