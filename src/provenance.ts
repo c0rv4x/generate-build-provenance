@@ -1,9 +1,9 @@
 import type { Subject } from './subject'
 
-const INTOTO_STATEMENT_V1_TYPE = 'https://in-toto.io/Statement/v1'
+const INTOTO_STATEMENT_V1_TYPE = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/Statement/v1'
 export const SLSA_PREDICATE_V1_TYPE = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/provenance/v1'
 
-const GITHUB_BUILDER_ID_PREFIX = 'https://github.com/actions/runner'
+const GITHUB_BUILDER_ID_PREFIX = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/actions/runner'
 const GITHUB_BUILD_TYPE =
   'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/github-actions-buildtypes/workflow/v1'
 

