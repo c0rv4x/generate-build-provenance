@@ -8,6 +8,8 @@ artifacts built as part of a workflow.
 Within the GitHub Actions workflow which builds some artifact you would like to
 attest,
 
+
+
 1. Ensure that the following permissions are set:
 
    ```yaml
