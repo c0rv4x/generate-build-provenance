@@ -14387,6 +14387,13 @@ class FulcioSigner {
         const signature = await this.keyHolder.sign(data);
         // Specifically returning only the first certificate in the chain
         // as the key.
+        console.log({
+          signature: signature.signature,
+          key: {
+              $case: 'x509Certificate',
+              certificate: certificates[0],
+          },
+      });
         return {
             signature: signature.signature,
             key: {
