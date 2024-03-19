@@ -62491,6 +62491,7 @@ async function run() {
         }
     }
 }
+
 exports.run = run;
 const attest = async (subject, visibility) => {
     const provenance = (0, provenance_1.generateProvenance)(subject, process.env);
