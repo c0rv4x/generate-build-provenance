@@ -62494,7 +62494,7 @@ async function run() {
 exports.run = run;
 const attest = async (subject, visibility) => {
     const provenance = (0, provenance_1.generateProvenance)(subject, process.env);
-    console.log(provenance);
+    console.log(JSON.stringify(provenance));
     core.startGroup(highlight(`Provenance attestation generated for ${subject.name} (sha256:${subject.digest.sha256})`));
     core.info(JSON.stringify(provenance, null, 2));
     core.endGroup();
