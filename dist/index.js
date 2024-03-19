@@ -14375,7 +14375,6 @@ class FulcioSigner {
         }
         // Construct challenge value by signing the subject claim
         console.log('>>>>>>..', subject);
-        subject = 'repo:MODIFIEDGitHubPrivateBugBounty/testxxxqwer:ref:refs/heads/main';
         const challenge = await this.keyHolder.sign(Buffer.from(subject));
         if (challenge.key.$case !== 'publicKey') {
             throw new error_1.InternalError({
